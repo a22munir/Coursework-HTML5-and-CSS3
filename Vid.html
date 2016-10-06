@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Video Template</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div id="wrapper">
+        <h1>Watch Our Video!<h1>
+        <div id="vid">
+        <video controls width="320px" height="240px" poster="Poster.png" id="vid1">
+            <source src="on_record.mp4" type="video/mp4">
+            <source src="on_record.ogv" type="video/ogv">
+            Your browser doesn't support HTML5 Video sorry!
+        </video>
+        <br>
+            <button onclick="playPause()"><p id="buttontext">Play</p></button> 
+        </div>
+        <script>
+        var myVideo = document.getElementById("vid1"); 
+        var txt = document.getElementById("buttontext");
+        function playPause(){ 
+            if (myVideo.paused) {
+                txt.innerHTML = "Pause";
+                myVideo.play(); 
+            }else {
+            txt.innerHTML = "Play";
+            myVideo.pause(); 
+            }
+        };
+        </script>
+    </div>
+</body>
+</html>
